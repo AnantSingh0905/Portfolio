@@ -1,0 +1,471 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #141414;
+    color: #ffffff;
+}
+
+/* Header styling with dark overlay */
+header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    height: 80px;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    z-index: -1;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    justify-content: center; /* Center items horizontally */
+    color: #e50914; /* Netflix Red */
+    font-weight: bold;
+    overflow: hidden; /* Hide overflow if necessary */
+}
+
+/* Ensure no wrapping of the text */
+.anant, .singh {
+    display: flex;
+    align-items: center;
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* Add space between "Anant" and "Singh" */
+.anant {
+    margin-right: 1rem; /* Adjust this value for the desired space */
+}
+
+/* Responsive font sizes with relative units */
+.anant .a {
+    font-size: 6vw; /* 6% of the viewport width */
+}
+
+.anant .n1 {
+    font-size: 5.5vw;
+}
+
+.anant .a2 {
+    font-size: 5vw;
+}
+
+.anant .n2 {
+    font-size: 4.5vw;
+}
+
+.anant .t {
+    font-size: 4vw;
+}
+
+.singh .s {
+    font-size: 4vw;
+}
+
+.singh .i {
+    font-size: 4.5vw;
+}
+
+.singh .n {
+    font-size: 5vw;
+}
+
+.singh .g {
+    font-size: 5.5vw;
+}
+
+.singh .h {
+    font-size: 6vw;
+}
+
+/* Optional: Additional responsive settings for specific screen sizes */
+@media (max-width: 1200px) {
+    .anant .a {
+        font-size: 5vw;
+    }
+
+    .anant .n1 {
+        font-size: 4.5vw;
+    }
+
+    .anant .a2 {
+        font-size: 4vw;
+    }
+
+    .anant .n2 {
+        font-size: 3.5vw;
+    }
+
+    .anant .t {
+        font-size: 3vw;
+    }
+
+    .singh .s {
+        font-size: 3vw;
+    }
+
+    .singh .i {
+        font-size: 3.5vw;
+    }
+
+    .singh .n {
+        font-size: 4vw;
+    }
+
+    .singh .g {
+        font-size: 4.5vw;
+    }
+
+    .singh .h {
+        font-size: 5vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .anant .a {
+        font-size: 4vw;
+    }
+
+    .anant .n1 {
+        font-size: 3.5vw;
+    }
+
+    .anant .a2 {
+        font-size: 3vw;
+    }
+
+    .anant .n2 {
+        font-size: 2.5vw;
+    }
+
+    .anant .t {
+        font-size: 2vw;
+    }
+
+    .singh .s {
+        font-size: 2vw;
+    }
+
+    .singh .i {
+        font-size: 2.5vw;
+    }
+
+    .singh .n {
+        font-size: 3vw;
+    }
+
+    .singh .g {
+        font-size: 3.5vw;
+    }
+
+    .singh .h {
+        font-size: 4vw;
+    }
+}
+
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #ff9900; /* Optional hover effect */
+}
+
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    background-image: url('multilpe\ books\ and\ programing\ language.jpg'); /* Fixed path */
+    background-size: cover;
+    background-position: center;
+    position: relative; /* Ensure the pseudo-element is positioned relative to the .hero container */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white; /* Set text color for contrast */
+    z-index: 1; /* Ensure the content is on top */
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black layer */
+    z-index: -1; /* Place behind the content */
+}
+
+.hero h1 {
+    font-size: 3em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.2em;
+}
+
+
+
+.about-me {
+    padding: 30px; /* Add padding on all sides */
+    background-color: #222;
+    text-align: left;
+    border-radius: 8px;
+    margin: 0 20px; /* Optional: Add margin for better spacing on smaller screens */
+}
+
+.about-me h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #e50914
+}
+
+.about-me p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+
+/* ----------------------------------------------------------------------------------------------------------------*/
+/* Episode Section */
+.episode {
+    padding: 30px;
+    background-color: #222;
+    margin: 20px auto;
+    border-radius: 8px;
+    width: 93%;
+}
+
+.episode h2 {
+    font-size: 32px;
+    color: #e50914; /* Netflix red color */
+    margin-bottom: 20px;
+}
+
+.skills h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.skills p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------*/
+
+
+
+/* Projects Section */
+.projects {
+    padding: 50px;
+}
+
+.projects h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    
+}
+
+.project-category {
+    margin-bottom: 30px;
+}
+
+.project-category h3 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #e50914
+}
+
+
+.project-list {
+    display: flex;
+    overflow-x: scroll;
+}
+
+.project-item {
+    width: 250px;
+    height: 150px;
+    background-color: #333;
+    margin-right: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+/* ----------------------------------------------------------------------------------------------------------------*/
+
+/* Education Section */
+.education ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.education li {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------*/
+.certifications ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.certifications li {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+/* -------------------------------------------------------------------------------------------------------------------*/
+
+.activities ul, .challenges ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.activities li, .challenges li {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background-color: #111;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: #ffffff;
+    margin: 0 10px;
+}
+
+/* ------------------------------------E3 the one where i got inernship ---------------------------------------------------------------*
+/* Basic styles for project items */
+.project-list {
+    display: flex;
+    gap: 20px; /* Space between project items */
+}
+
+.project-item {
+    position: relative;
+    display: block;
+    width: 200px; /* Adjust as needed */
+    height: 150px; /* Adjust as needed */
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    overflow: hidden; /* Hide overflow */
+}
+
+.project-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the container without stretching */
+    transition: opacity 0.3s ease;
+}
+
+.project-name {
+    display: none; /* Hidden by default */
+    position: absolute;
+    bottom: 0; /* Position the text at the bottom of the container */
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 1em;
+}
+
+
+.project-item:hover .project-name {
+    display: block; /* Show project name on hover */
+}
+
+.project-item:hover .project-logo {
+    opacity: 0.7; /* Optional: Dim logo on hover */
+}
+/*--------------------------------time--------------------------------------------------------------------------*/
+.timeline-container {
+    display: flex;
+    justify-content: center;
+    height: 20px;
+    flex-direction: column;
+}
+
+.timeline {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    position: relative;
+    margin-left: 50px; /* Add this to move it right */
+    /* Alternatively, you can use padding-left instead of margin */
+    /* padding-left: 50px; */
+}
+
+.start-date, .end-date {
+    font-size: 18px;
+}
+
+.line {
+    flex: 1;
+    height: 5px;
+    background-color: red;
+    position: relative;
+    margin: 0 10px;
+}
+
+.circle {
+    position: absolute;
+    top: -6px;
+    right: 0;
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 5px rgba(255, 0, 0, 0.6);
+}
+/*________________________________________ project image________________________________hover________________________*/
+

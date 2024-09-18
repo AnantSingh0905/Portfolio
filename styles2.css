@@ -1,0 +1,364 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #141414;
+    color: #ffffff;
+}
+
+/* Header */
+header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    height: 80px;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    z-index: -1;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    justify-content: center; /* Center items horizontally */
+    color: #e50914; /* Netflix Red */
+    font-weight: bold;
+    overflow: hidden; /* Hide overflow if necessary */
+}
+
+/* Ensure no wrapping of the text */
+.anant, .singh {
+    display: flex;
+    align-items: center;
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* Add space between "Anant" and "Singh" */
+.anant {
+    margin-right: 1rem; /* Adjust this value for the desired space */
+}
+
+/* Responsive font sizes with relative units */
+.anant .a {
+    font-size: 6vw; /* 6% of the viewport width */
+}
+
+.anant .n1 {
+    font-size: 5.5vw;
+}
+
+.anant .a2 {
+    font-size: 5vw;
+}
+
+.anant .n2 {
+    font-size: 4.5vw;
+}
+
+.anant .t {
+    font-size: 4vw;
+}
+
+.singh .s {
+    font-size: 4vw;
+}
+
+.singh .i {
+    font-size: 4.5vw;
+}
+
+.singh .n {
+    font-size: 5vw;
+}
+
+.singh .g {
+    font-size: 5.5vw;
+}
+
+.singh .h {
+    font-size: 6vw;
+}
+
+/* Optional: Additional responsive settings for specific screen sizes */
+@media (max-width: 1200px) {
+    .anant .a {
+        font-size: 5vw;
+    }
+
+    .anant .n1 {
+        font-size: 4.5vw;
+    }
+
+    .anant .a2 {
+        font-size: 4vw;
+    }
+
+    .anant .n2 {
+        font-size: 3.5vw;
+    }
+
+    .anant .t {
+        font-size: 3vw;
+    }
+
+    .singh .s {
+        font-size: 3vw;
+    }
+
+    .singh .i {
+        font-size: 3.5vw;
+    }
+
+    .singh .n {
+        font-size: 4vw;
+    }
+
+    .singh .g {
+        font-size: 4.5vw;
+    }
+
+    .singh .h {
+        font-size: 5vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .anant .a {
+        font-size: 4vw;
+    }
+
+    .anant .n1 {
+        font-size: 3.5vw;
+    }
+
+    .anant .a2 {
+        font-size: 3vw;
+    }
+
+    .anant .n2 {
+        font-size: 2.5vw;
+    }
+
+    .anant .t {
+        font-size: 2vw;
+    }
+
+    .singh .s {
+        font-size: 2vw;
+    }
+
+    .singh .i {
+        font-size: 2.5vw;
+    }
+
+    .singh .n {
+        font-size: 3vw;
+    }
+
+    .singh .g {
+        font-size: 3.5vw;
+    }
+
+    .singh .h {
+        font-size: 4vw;
+    }
+}
+
+
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+}
+header nav ul li a:hover {
+    color: #ff9900; /* Optional hover effect */
+}
+
+/* Title Section */
+h1{
+    color: #e50914;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.5em;
+}
+
+h2 {
+    color: #e50914; /* Netflix Red */
+} 
+
+/* Project Section */
+.project-section {
+    padding: 30px; /* Add padding on all sides */
+    background-color: #222;
+    text-align: left;
+    border-radius: 8px;
+    margin: 20px;
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space items out */
+}
+
+.slider {
+    position: relative;
+    max-width: 600px;
+    width: 60%; /* Slider takes up 60% of the section width */
+    overflow: hidden;
+    border: 2px solid #ddd; /* Optional: Add border to slider */
+    height: 400px; /* Fixed height for the slider */
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%; /* Ensure slides container takes full height of slider */
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    height: 100%; /* Ensure each slide takes full height of the slider */
+    display: flex;
+    flex-direction: column; /* Stack image and description vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    background-color: #f0f0f0; /* Optional: Background color to handle empty spaces */
+}
+
+.slide img {
+    max-width: 100%;
+    max-height: 70%; /* Restrict image height to 70% of the slide height */
+    object-fit: contain; /* Ensure image fits within the slide without cropping */
+}
+
+.slide-description {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    width: 100%; /* Full width of the slide */
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.desc {
+    width: 35%; /* Description takes up 35% of the section width */
+    color: #fff;
+}
+
+.desc h3 {
+    margin-top: 0;
+}
+
+/* Timeline */
+.timeline-container {
+    display: flex;
+    justify-content: center;
+    height: 20px;
+    flex-direction: column;
+}
+
+.timeline {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    /* Adjust this value to move it right */
+    padding-left: 50px;
+}
+
+.start-date, .end-date {
+    font-size: 18px;
+}
+
+.line {
+    flex: 1;
+    height: 5px;
+    background-color: red;
+    position: relative;
+    margin: 0 10px;
+}
+
+.circle {
+    position: absolute;
+    top: -6px;
+    right: 0;
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 5px rgba(255, 0, 0, 0.6);
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background-color: #111;
+    text-align: center;
+}
+
+.footer-links a {
+    color: #e50914; /* Netflix Red */
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 16px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .project-section {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        text-align: center; /* Center text on smaller screens */
+    }
+
+    .slider, .desc {
+        width: 100%; /* Full width on smaller screens */
+        margin: 10px 0;
+    }
+}
